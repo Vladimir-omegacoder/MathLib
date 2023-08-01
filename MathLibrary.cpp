@@ -1,9 +1,24 @@
-﻿
-#include <iostream>
+﻿#include <iostream>
+
+
+
+#include "VectorInt.h"
+
+
+
+
+
+
+
 
 int main()
 {
-    std::cout << "Hello World!\n";
+
+    mtl::VectorInt vec(5, 2);
+
+
+	
+
 }
 
 
