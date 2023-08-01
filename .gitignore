@@ -33,3 +33,5 @@
 
 #VS files
 *.vcxproj*
+x64/
+
