@@ -25,13 +25,34 @@ namespace mtl {
 
 
 
-		int GetX() { return m_x; }
-		int GetY() { return m_y; }
+		int GetX() const { return m_x; }
+		int GetY() const { return m_y; }
 
 		void SetX(int x) { m_x = x; }
 		void SetY(int y) { m_y = y; }
 
-		//TODO...
+
+
+		VectorInt MultiplyByNum(const int num) const;
+
+		VectorInt DivideByNum(const int num) const;
+
+		VectorInt Substract(const VectorInt& vec) const;
+
+		VectorInt Invert() const;
+
+		//TODO:
+		//1. Operators overload: 
+		// a + b
+		// a - b
+		// -a
+		// a * k
+		// a / k
+		// a * b(skalar and vector)
+		// << a
+		//2. Methods for operators. 
+		//3. Vector modulus.
+		// 
 
 	};
 
