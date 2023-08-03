@@ -39,6 +39,13 @@ int main()
 
 
 
+	//IDEAS
+	// 
+	// Shape interface class
+	// Triangle, Rectangle, Circle etc.
+	//
+
+
 	return 0;
 
 }

@@ -42,16 +42,26 @@ namespace mtl {
 		VectorInt Invert() const;
 
 		//TODO:
-		//1. Operators overload: 
+		//1. Operators to overload: 
 		// a + b
 		// a - b
 		// -a
+		// +a
 		// a * k
 		// a / k
-		// a * b(skalar and vector)
+		// a * b(skalar and vector) Method maybe?
 		// << a
+		// ++a (a++)
+		// --a (a--)
+		// a += b
+		// a -= b
+		// a *= k
+		// a /= k
+		// a == b
+		// a != b
+		// 
 		//2. Methods for operators. 
-		//3. Vector modulus.
+		// Vector modulus.
 		// 
 
 	};
