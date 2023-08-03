@@ -14,7 +14,7 @@
 int main()
 {
 
-<<<<<<< HEAD
+
     mtl::VectorInt vec(5, 2);
 	mtl::VectorInt vec2(3, 4);
 
@@ -23,7 +23,8 @@ int main()
 	std::cout << "Addition: ";
 	vec.Addition(vec2).VectorPrint();
 	std::cout << std::endl;
-=======
+
+
 	mtl::VectorInt t(5, 14);
 	mtl::VectorInt a(5, 14);
 	mtl::VectorInt b(-2, -7);
@@ -51,7 +52,6 @@ int main()
 
 	return 0;
 
->>>>>>> 62d1c18ffb31a033aaaad250c010ec62867a9617
 }
 
 

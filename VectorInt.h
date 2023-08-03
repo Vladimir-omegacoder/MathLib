@@ -38,9 +38,24 @@ namespace mtl {
 
 		VectorInt DivideByNum(const int num) const;
 
+		int ScalarProduct(const VectorInt& vec);
+
+
+
 		VectorInt Substract(const VectorInt& vec) const;
 
+		VectorInt Addition(const VectorInt& vec);
+
+
+
 		VectorInt Invert() const;
+
+		double Module();
+
+
+
+		void VectorPrint();
+
 
 		//TODO:
 		//1. Operators overload: 
@@ -53,17 +68,7 @@ namespace mtl {
 		// << a
 		//2. Methods for operators. 
 		//3. Vector modulus.
-		// 
-
-
-
-		int ScalarProduct(const VectorInt& vec);
-
-		VectorInt Addition(const VectorInt& vec);
-
-		double Module();
-
-		void VectorPrint();
+		// 	
 
 	};
 
