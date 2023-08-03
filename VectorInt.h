@@ -1,5 +1,6 @@
 #pragma once
-
+#include <iostream>
+#include <cmath>
 
 namespace mtl {
 
@@ -32,6 +33,16 @@ namespace mtl {
 		void SetY(int y) { m_y = y; }
 
 		//TODO...
+
+
+
+		int ScalarProduct(const VectorInt& vec);
+
+		VectorInt Addition(const VectorInt& vec);
+
+		double Module();
+
+		void VectorPrint();
 
 	};
 
