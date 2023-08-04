@@ -48,6 +48,46 @@ int main()
 		std::cout << '\n';
 	}
 
+	std::cout << '\n';
+
+	//Operator "=="
+	{
+		mtl::VectorInt a(-5, 15), b(3, -7);
+
+		std::cout << "a: ";
+		a.VectorPrint();
+		std::cout << '\n';
+		std::cout << "b: ";
+		b.VectorPrint();
+		std::cout << '\n';
+
+		if (a == b) 
+		{
+			std::cout << "a and b are equal\n";
+		}
+		else
+		{
+			std::cout << "a and b are not equal\n";
+		}
+
+		b.SetX(-5), b.SetY(15);
+
+		std::cout << "a: ";
+		a.VectorPrint();
+		std::cout << '\n';
+		std::cout << "b: ";
+		b.VectorPrint();
+		std::cout << '\n';
+
+		if (a == b)
+		{
+			std::cout << "a and b are equal\n";
+		}
+		else
+		{
+			std::cout << "a and b are not equal\n";
+		}
+	}
 
 
 
