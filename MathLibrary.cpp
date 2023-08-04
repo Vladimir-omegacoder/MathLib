@@ -89,6 +89,22 @@ int main()
 		}
 	}
 
+	std::cout << '\n';
+
+	//Operator "/="
+	{
+		mtl::VectorInt a(-8, 15);
+		const int k = -3;
+
+		(a /= k).VectorPrint();	// Should be "(2; -5)
+		std::cout << '\n';
+
+		a.VectorPrint();		// Should be "(2; -5)"
+		std::cout << '\n';
+
+		//a /= 0; //Exception, division by zero.
+	}
+
 
 
 	return 0;

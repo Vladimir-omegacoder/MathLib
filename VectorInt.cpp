@@ -102,6 +102,16 @@ mtl::VectorInt& mtl::VectorInt::operator+=(const VectorInt& vec)
 
 }
 
+mtl::VectorInt& mtl::VectorInt::operator/=(const int k)
+{
+
+	m_x /= k;
+	m_y /= k;
+
+	return *this;
+
+}
+
 
 
 bool mtl::operator==(const VectorInt& vec1, const VectorInt& vec2)

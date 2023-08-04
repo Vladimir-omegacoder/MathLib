@@ -66,6 +66,8 @@ namespace mtl {
 
 		VectorInt& operator+=(const VectorInt& vec);
 
+		VectorInt& operator/=(const int k);
+
 
 
 		friend bool operator==(const VectorInt& vec1, const VectorInt& vec2);
