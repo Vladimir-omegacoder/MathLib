@@ -1,5 +1,6 @@
 #pragma once
-
+#include <iostream>
+#include <cmath>
 
 namespace mtl {
 
@@ -37,9 +38,24 @@ namespace mtl {
 
 		VectorInt DivideByNum(const int num) const;
 
+		int ScalarProduct(const VectorInt& vec);
+
+
+
 		VectorInt Substract(const VectorInt& vec) const;
 
+		VectorInt Addition(const VectorInt& vec);
+
+
+
 		VectorInt Invert() const;
+
+		double Module();
+
+
+
+		void VectorPrint();
+
 
 		//TODO:
 		//1. Operators to overload: 
@@ -61,8 +77,8 @@ namespace mtl {
 		// a != b
 		// 
 		//2. Methods for operators. 
-		// Vector modulus.
-		// 
+		//3. Vector modulus.
+		// 	
 
 	};
 
