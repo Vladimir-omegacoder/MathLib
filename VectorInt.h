@@ -38,23 +38,33 @@ namespace mtl {
 
 		VectorInt DivideByNum(const int num) const;
 
-		int ScalarProduct(const VectorInt& vec);
+		int ScalarProduct(const VectorInt& vec) const;
 
 
 
 		VectorInt Substract(const VectorInt& vec) const;
 
-		VectorInt Addition(const VectorInt& vec);
+		VectorInt Addition(const VectorInt& vec) const;
 
 
 
 		VectorInt Invert() const;
 
-		double Module();
+		double Module() const;
 
 
 
-		void VectorPrint();
+		void VectorPrint() const;
+
+
+
+		VectorInt& operator--();
+
+		VectorInt operator--(int);
+
+
+
+
 
 
 		//TODO:

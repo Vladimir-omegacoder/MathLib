@@ -1,8 +1,6 @@
 #include "VectorInt.h"
 
 
-                                /* a * b | a / b */
-//////////////////////////////////////////////////////////////////////////////////////
 
 mtl::VectorInt mtl::VectorInt::MultiplyByNum(const int num) const
 {
@@ -18,7 +16,7 @@ mtl::VectorInt mtl::VectorInt::DivideByNum(const int num) const
 
 }
 
-int mtl::VectorInt::ScalarProduct(const VectorInt& vec) 
+int mtl::VectorInt::ScalarProduct(const VectorInt& vec) const
 {
 
 	return (m_x * vec.m_x) + (m_y * vec.m_y);
@@ -26,8 +24,6 @@ int mtl::VectorInt::ScalarProduct(const VectorInt& vec)
 }
 
 
-                                 /*  a + b | a - b */
-//////////////////////////////////////////////////////////////////////////////////////
 
 
 mtl::VectorInt mtl::VectorInt::Substract(const VectorInt& vec) const
@@ -37,7 +33,7 @@ mtl::VectorInt mtl::VectorInt::Substract(const VectorInt& vec) const
 
 }
 
-mtl::VectorInt mtl::VectorInt::Addition(const VectorInt& vec)
+mtl::VectorInt mtl::VectorInt::Addition(const VectorInt& vec) const
 {
 
 	return VectorInt(m_x + vec.m_x, m_y + vec.m_y);
@@ -45,8 +41,6 @@ mtl::VectorInt mtl::VectorInt::Addition(const VectorInt& vec)
 }
 
 
-                                      /* Modul | Invert*/
-//////////////////////////////////////////////////////////////////////////////////////
 
 
 mtl::VectorInt mtl::VectorInt::Invert() const
@@ -56,7 +50,7 @@ mtl::VectorInt mtl::VectorInt::Invert() const
 
 }
 
-double mtl::VectorInt::Module()
+double mtl::VectorInt::Module() const
 {
 
 	return sqrt(m_x * m_x + m_y * m_y);
@@ -64,13 +58,43 @@ double mtl::VectorInt::Module()
 }
 
 
-                                           /* <<a */
-//////////////////////////////////////////////////////////////////////////////////////
 
 
-void mtl::VectorInt::VectorPrint()
+void mtl::VectorInt::VectorPrint() const
 {
-	std::cout << "(" << m_x << "," << m_y<<")";
+
+	std::cout << '(' << m_x << "; " << m_y << ')';
+
 }
+
+
+
+mtl::VectorInt& mtl::VectorInt::operator--()
+{
+	
+	--m_x;
+	--m_y;
+
+	return *this;
+
+}
+
+mtl::VectorInt mtl::VectorInt::operator--(int)
+{
+
+	VectorInt temp(*this);
+
+	operator--();
+
+	return temp;
+
+}
+
+
+
+
+
+
+
 
 

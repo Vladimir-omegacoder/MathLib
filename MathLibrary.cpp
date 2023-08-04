@@ -14,39 +14,29 @@
 int main()
 {
 
+	//Prefix decrement
+	{
+		mtl::VectorInt a(-5, 15);
+		(--a).VectorPrint();	// Should be "(-6; 14)"
+		std::cout << '\n';
 
-    mtl::VectorInt vec(5, 2);
-	mtl::VectorInt vec2(3, 4);
+		a.VectorPrint();		// Should be "(-6; 14)"
+		std::cout << '\n';
+	}
 
-	std::cout << "Module: " << vec.Module()<<std::endl;
-	std::cout << "Scalar prodyct: " << vec.ScalarProduct(vec2) << std::endl;
-	std::cout << "Addition: ";
-	vec.Addition(vec2).VectorPrint();
-	std::cout << std::endl;
+	std::cout << '\n';
+
+	//Postfix decrement
+	{
+		mtl::VectorInt a(-5, 15);
+		(a--).VectorPrint();	// Should be "(-5; 15)
+		std::cout << '\n';
+
+		a.VectorPrint();		// Should be "(-6; 14)"
+		std::cout << '\n';
+	}
 
 
-	mtl::VectorInt t(5, 14);
-	mtl::VectorInt a(5, 14);
-	mtl::VectorInt b(-2, -7);
-
-	std::cout << a.GetX() << "; " << a.GetY() << '\n';
-
-
-
-	a = a.DivideByNum(2);
-	std::cout << a.GetX() << "; " << a.GetY() << '\n';
-
-	a = t;
-	a = a.MultiplyByNum(4);
-	std::cout << a.GetX() << "; " << a.GetY() << '\n';
-
-	a = t;
-	a = a.Invert();
-	std::cout << a.GetX() << "; " << a.GetY() << '\n';
-
-	a = t;
-	a = a.Substract(b);
-	std::cout << a.GetX() << "; " << a.GetY() << '\n';
 
 
 
