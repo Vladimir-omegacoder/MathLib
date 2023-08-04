@@ -92,6 +92,18 @@ mtl::VectorInt mtl::VectorInt::operator--(int)
 
 
 
+mtl::VectorInt& mtl::VectorInt::operator+=(const VectorInt& vec)
+{
+	
+	m_x += vec.m_x;
+	m_y += vec.m_y;
+
+	return *this;
+
+}
+
+
+
 
 
 

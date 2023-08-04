@@ -36,15 +36,19 @@ int main()
 		std::cout << '\n';
 	}
 
+	std::cout << '\n';
+
+	//Operator "+="
+	{
+		mtl::VectorInt a(-5, 15), b(3, -7);
+		(a+=b).VectorPrint();	// Should be "(-2; 8)
+		std::cout << '\n';
+
+		a.VectorPrint();		// Should be "(-2; 8)"
+		std::cout << '\n';
+	}
 
 
-
-
-	//IDEAS
-	// 
-	// Shape interface class
-	// Triangle, Rectangle, Circle etc.
-	//
 
 
 	return 0;
