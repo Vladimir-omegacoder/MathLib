@@ -70,6 +70,9 @@ namespace mtl {
 
 
 		VectorInt& operator+=(const VectorInt& vec);
+		
+		VectorInt& operator-=(const VectorInt& vec);
+
 
 		VectorInt& operator/=(const int k);
 

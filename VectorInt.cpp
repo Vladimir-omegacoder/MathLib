@@ -92,19 +92,23 @@ mtl::VectorInt mtl::VectorInt::operator--(int)
 
 mtl::VectorInt& mtl::VectorInt::operator++()
 {
+
 	++m_x;
 	++m_y;
 
 	return *this;
+
 }
 
 mtl::VectorInt& mtl::VectorInt::operator++(int)
 {
+
 	VectorInt temp(m_x, m_y);
 
 	++(*this);
 
 	return temp;
+
 }
 
 
@@ -114,6 +118,16 @@ mtl::VectorInt& mtl::VectorInt::operator+=(const VectorInt& vec)
 	
 	m_x += vec.m_x;
 	m_y += vec.m_y;
+
+	return *this;
+
+}
+
+mtl::VectorInt& mtl::VectorInt::operator-=(const VectorInt& vec)
+{
+
+	m_x -= vec.m_x;
+	m_y -= vec.m_y;
 
 	return *this;
 

@@ -75,6 +75,18 @@ int main()
 
 	std::cout << '\n';
 
+	//Operator "+="
+	{
+		mtl::VectorInt a(-5, 15), b(3, -7);
+		(a -= b).VectorPrint();	// Should be "(-8; 22)
+		std::cout << '\n';
+
+		a.VectorPrint();		// Should be "(-8; 22)"
+		std::cout << '\n';
+	}
+
+	std::cout << '\n';
+
 	//Operator "=="
 	{
 		mtl::VectorInt a(-5, 15), b(3, -7);
