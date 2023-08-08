@@ -85,15 +85,21 @@ namespace mtl {
 		friend bool operator!=(const VectorInt& vec1, const VectorInt& vec2);
 
 		//TODO:
-		//1. Operators to overload: 
-		// a + b
-		// a - b
-		// -a
-		// +a
-		// a * k
-		// a / k
-		// a * b(skalar and vector) Method maybe?
-		// << a
+		//1. Operators to overload
+		// -----------------
+		// a + b	CHANGE
+		// a - b	CHANGE
+		// -a		CHANGE
+		// +a		CHANGE
+		// a * k	CHANGE
+		// a / k	CHANGE
+		// << a		ADD
+		// -----------------
+		// a * b(skalar and vector) Static method maybe?
+		// 
+
+		//DONE
+		// 
 		// ++a (a++)
 		// --a (a--)
 		// a += b
@@ -103,9 +109,8 @@ namespace mtl {
 		// a == b
 		// a != b
 		// 
-		//2. Methods for operators. 
-		//3. Vector modulus.
-		// 	
+		// Vector modulus.
+		//
 
 	};
 

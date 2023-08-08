@@ -25,7 +25,6 @@ int mtl::VectorInt::ScalarProduct(const VectorInt& vec) const
 
 
 
-
 mtl::VectorInt mtl::VectorInt::Substract(const VectorInt& vec) const
 {
 
@@ -42,7 +41,6 @@ mtl::VectorInt mtl::VectorInt::Addition(const VectorInt& vec) const
 
 
 
-
 mtl::VectorInt mtl::VectorInt::Invert() const
 {
 
@@ -56,7 +54,6 @@ double mtl::VectorInt::Module() const
 	return sqrt(m_x * m_x + m_y * m_y);
 
 }
-
 
 
 
@@ -89,6 +86,7 @@ mtl::VectorInt mtl::VectorInt::operator--(int)
 	return temp;
 
 }
+
 
 mtl::VectorInt& mtl::VectorInt::operator++()
 {
@@ -133,6 +131,8 @@ mtl::VectorInt& mtl::VectorInt::operator-=(const VectorInt& vec)
 
 }
 
+
+
 mtl::VectorInt& mtl::VectorInt::operator*=(const int k)
 {
 
@@ -166,3 +166,6 @@ bool mtl::operator!=(const VectorInt& vec1, const VectorInt& vec2)
 {
 	return !(vec1 == vec2);
 }
+
+
+
