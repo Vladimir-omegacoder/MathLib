@@ -100,7 +100,7 @@ mtl::VectorInt& mtl::VectorInt::operator++()
 
 }
 
-mtl::VectorInt& mtl::VectorInt::operator++(int)
+mtl::VectorInt mtl::VectorInt::operator++(int)
 {
 
 	VectorInt temp(m_x, m_y);

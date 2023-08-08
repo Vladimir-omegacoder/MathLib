@@ -31,7 +31,9 @@
 *.out
 *.app
 
-#VS files
+# VS files
 *.vcxproj*
 x64/
 
+# Other files
+logs.txt

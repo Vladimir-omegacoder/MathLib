@@ -65,7 +65,7 @@ namespace mtl {
 
 		VectorInt& operator ++();
 
-		VectorInt& operator ++(int);
+		VectorInt operator ++(int);
 
 
 
