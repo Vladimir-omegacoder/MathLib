@@ -82,6 +82,8 @@ namespace mtl {
 
 		friend bool operator==(const VectorInt& vec1, const VectorInt& vec2);
 
+		friend bool operator!=(const VectorInt& vec1, const VectorInt& vec2);
+
 		//TODO:
 		//1. Operators to overload: 
 		// a + b

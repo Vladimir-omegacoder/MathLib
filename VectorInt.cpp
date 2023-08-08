@@ -161,3 +161,8 @@ bool mtl::operator==(const VectorInt& vec1, const VectorInt& vec2)
 	return vec1.m_x == vec2.m_x && vec1.m_y == vec2.m_y;
 
 }
+
+bool mtl::operator!=(const VectorInt& vec1, const VectorInt& vec2)
+{
+	return !(vec1 == vec2);
+}
