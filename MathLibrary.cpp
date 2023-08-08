@@ -38,6 +38,31 @@ int main()
 
 	std::cout << '\n';
 
+	//Prefix increment
+	{
+		mtl::VectorInt a(-5, 15);
+		(++a).VectorPrint();	// Should be "(-4; 16)"
+		std::cout << '\n';
+
+		a.VectorPrint();		// Should be "(-4; 16)"
+		std::cout << '\n';
+	}
+
+	std::cout << '\n';
+
+	//Postfix increment
+	{
+		mtl::VectorInt a(-5, 15);
+		(a++).VectorPrint();	// Should be "(-5; 15)
+		std::cout << '\n';
+
+		a.VectorPrint();		// Should be "(-4; 16)"
+		std::cout << '\n';
+	}
+
+	std::cout << '\n';
+
+
 	//Operator "+="
 	{
 		mtl::VectorInt a(-5, 15), b(3, -7);
@@ -104,6 +129,8 @@ int main()
 
 		//a /= 0; //Exception, division by zero.
 	}
+
+
 
 
 

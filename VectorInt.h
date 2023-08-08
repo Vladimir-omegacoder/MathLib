@@ -63,6 +63,11 @@ namespace mtl {
 		VectorInt operator--(int);
 
 
+		VectorInt& operator ++();
+
+		VectorInt& operator ++(int);
+
+
 
 		VectorInt& operator+=(const VectorInt& vec);
 
