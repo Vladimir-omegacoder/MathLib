@@ -75,7 +75,7 @@ int main()
 
 	std::cout << '\n';
 
-	//Operator "+="
+	//Operator "-="
 	{
 		mtl::VectorInt a(-5, 15), b(3, -7);
 		(a -= b).VectorPrint();	// Should be "(-8; 22)
@@ -128,6 +128,21 @@ int main()
 
 	std::cout << '\n';
 
+	//Operator "*="
+	{
+		mtl::VectorInt a(-8, 15);
+		const int k = -3;
+
+		(a *= k).VectorPrint();	// Should be "(24; -45)
+		std::cout << '\n';
+
+		a.VectorPrint();		// Should be "(24; -45)"
+		std::cout << '\n';
+
+	}
+
+	std::cout << '\n';
+
 	//Operator "/="
 	{
 		mtl::VectorInt a(-8, 15);
@@ -141,9 +156,6 @@ int main()
 
 		//a /= 0; //Exception, division by zero.
 	}
-
-
-
 
 
 	return 0;

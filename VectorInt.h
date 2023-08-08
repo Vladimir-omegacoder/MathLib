@@ -74,6 +74,8 @@ namespace mtl {
 		VectorInt& operator-=(const VectorInt& vec);
 
 
+		VectorInt& operator*=(const int k);
+
 		VectorInt& operator/=(const int k);
 
 
