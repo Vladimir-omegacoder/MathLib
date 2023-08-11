@@ -48,7 +48,11 @@ namespace mtl {
 
 
 
+		VectorInt operator+() const;
+
 		VectorInt Invert() const;
+
+
 
 		double Module() const;
 

@@ -70,7 +70,14 @@ int main()
 
 #ifdef OPERATOR_3
 
-//CODE HERE
+	//Operator "+a"
+	{
+		mtl::VectorInt a(7, -10);
+		(+a).VectorPrint();		// Should be "(-7; 10)
+		std::cout << '\n';
+		a.VectorPrint();		// Should be "(-7; 10)
+		std::cout << '\n';
+	}
 
 #endif // OPERATOR_3
 

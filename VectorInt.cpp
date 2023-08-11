@@ -41,12 +41,21 @@ mtl::VectorInt mtl::VectorInt::Addition(const VectorInt& vec) const
 
 
 
+mtl::VectorInt mtl::VectorInt::operator+() const
+{
+
+	return VectorInt(*this);
+
+}
+
 mtl::VectorInt mtl::VectorInt::Invert() const
 {
 
 	return VectorInt(-m_x, -m_y);
 
 }
+
+
 
 double mtl::VectorInt::Module() const
 {
