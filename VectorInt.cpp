@@ -9,10 +9,10 @@ mtl::VectorInt mtl::VectorInt::DivideByNum(const int num) const
 
 }
 
-int mtl::VectorInt::ScalarProduct(const VectorInt& vec) const
+int mtl::VectorInt::ScalarProduct(const VectorInt& vec1, const VectorInt& vec2)
 {
 
-	return (m_x * vec.m_x) + (m_y * vec.m_y);
+	return vec1.GetX() * vec2.GetX() + vec1.GetY() * vec2.GetY();
 
 }
 

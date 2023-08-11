@@ -371,7 +371,14 @@ int main()
 
 #ifdef SCALAR_PRODUCT
 
-//CODE HERE
+	//Scalar product
+	{
+		mtl::VectorInt a1(-5, 15), b1(3, -7);
+		std::cout << mtl::VectorInt::ScalarProduct(a1, b1) << '\n';	//Should be "-120"
+
+		mtl::VectorInt a2(3, 1), b2(1, -3);
+		std::cout << mtl::VectorInt::ScalarProduct(a2, b2) << '\n';	//Should be "0"
+	}
 
 #endif // SCALAR_PRODUCT
 

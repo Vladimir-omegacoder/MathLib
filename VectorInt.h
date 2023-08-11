@@ -36,7 +36,7 @@ namespace mtl {
 
 		VectorInt DivideByNum(const int num) const;
 
-		int ScalarProduct(const VectorInt& vec) const;
+		static int ScalarProduct(const VectorInt& vec1, const VectorInt& vec2);
 
 
 
