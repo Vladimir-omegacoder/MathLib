@@ -32,13 +32,6 @@ mtl::VectorInt mtl::VectorInt::Substract(const VectorInt& vec) const
 
 }
 
-mtl::VectorInt mtl::VectorInt::Addition(const VectorInt& vec) const
-{
-
-	return VectorInt(m_x + vec.m_x, m_y + vec.m_y);
-
-}
-
 
 
 mtl::VectorInt mtl::VectorInt::operator+() const
@@ -174,6 +167,15 @@ bool mtl::operator==(const VectorInt& vec1, const VectorInt& vec2)
 bool mtl::operator!=(const VectorInt& vec1, const VectorInt& vec2)
 {
 	return !(vec1 == vec2);
+}
+
+
+
+mtl::VectorInt mtl::operator+(const VectorInt& vec1, const VectorInt& vec2)
+{
+	
+	return VectorInt(vec1.GetX() + vec2.GetX(), vec1.GetY() + vec2.GetY());
+
 }
 
 

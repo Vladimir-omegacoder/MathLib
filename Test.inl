@@ -28,7 +28,7 @@
 //#define OPERATOR_2
 //#define OPERATOR_3
 //#define OPERATOR_4
-//#define OPERATOR_5
+#define OPERATOR_5
 //#define OPERATOR_6
 //#define OPERATOR_7
 //#define OPERATOR_8
@@ -73,9 +73,9 @@ int main()
 	//Operator "+a"
 	{
 		mtl::VectorInt a(7, -10);
-		(+a).VectorPrint();		// Should be "(-7; 10)
+		(+a).VectorPrint();		// Should be "(-7; 10)"
 		std::cout << '\n';
-		a.VectorPrint();		// Should be "(-7; 10)
+		a.VectorPrint();		// Should be "(-7; 10)"
 		std::cout << '\n';
 	}
 
@@ -93,7 +93,23 @@ int main()
 
 #ifdef OPERATOR_5
 
-//CODE HERE
+	//Operator "a + b"
+	{
+		mtl::VectorInt a(7, -10), b(1, 23) , c;
+
+		(a + b).VectorPrint();	// Should be "(8; 13)"
+		std::cout << '\n';
+
+		a.VectorPrint();			// Should be "(7; -10)"
+		std::cout << '\n';
+
+		b.VectorPrint();			// Should be "(1, 23)"
+		std::cout << '\n';
+
+		c = a + b;
+		c.VectorPrint();			// Should be "(8, 13)"
+		std::cout << '\n';
+	}
 
 #endif // OPERATOR_5
 
@@ -197,7 +213,7 @@ int main()
 	//Operator "-="
 	{
 		mtl::VectorInt a(-5, 15), b(3, -7);
-		(a -= b).VectorPrint();	// Should be "(-8; 22)
+		(a -= b).VectorPrint();	// Should be "(-8; 22)"
 		std::cout << '\n';
 		a.VectorPrint();		// Should be "(-8; 22)"
 		std::cout << '\n';
@@ -214,7 +230,7 @@ int main()
 		mtl::VectorInt a(-8, 15);
 		const int k = -3;
 
-		(a *= k).VectorPrint();	// Should be "(24; -45)
+		(a *= k).VectorPrint();	// Should be "(24; -45)"
 		std::cout << '\n';
 
 		a.VectorPrint();		// Should be "(24; -45)"
@@ -232,7 +248,7 @@ int main()
 	{
 		mtl::VectorInt a(-8, 15);
 		const int k = -3;
-		(a /= k).VectorPrint();	// Should be "(2; -5)
+		(a /= k).VectorPrint();	// Should be "(2; -5)"
 		std::cout << '\n';
 		a.VectorPrint();		// Should be "(2; -5)"
 		std::cout << '\n';

@@ -44,8 +44,6 @@ namespace mtl {
 
 		VectorInt Substract(const VectorInt& vec) const;
 
-		VectorInt Addition(const VectorInt& vec) const;
-
 
 
 		VectorInt operator+() const;
@@ -117,6 +115,10 @@ namespace mtl {
 		//
 
 	};
+
+
+
+	VectorInt operator+(const VectorInt& vec1, const VectorInt& vec2);
 
 
 
