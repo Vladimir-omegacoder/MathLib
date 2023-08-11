@@ -28,7 +28,7 @@
 //#define OPERATOR_2
 //#define OPERATOR_3
 //#define OPERATOR_4
-#define OPERATOR_5
+//#define OPERATOR_5
 //#define OPERATOR_6
 //#define OPERATOR_7
 //#define OPERATOR_8
@@ -97,7 +97,7 @@ int main()
 	{
 		mtl::VectorInt a(7, -10), b(1, 23) , c;
 
-		(a + b).VectorPrint();	// Should be "(8; 13)"
+		(a + b).VectorPrint();		// Should be "(8; 13)"
 		std::cout << '\n';
 
 		a.VectorPrint();			// Should be "(7; -10)"
@@ -125,7 +125,23 @@ int main()
 
 #ifdef OPERATOR_7
 
-//CODE HERE
+	//Operator "a * k(k * a)"
+	{
+		mtl::VectorInt a(-3, 1);
+		int k = -4;
+
+		(a * k).VectorPrint();		// Should be "(12; -4)"
+		std::cout << '\n';
+
+		a.VectorPrint();			// Should be "(-3; 1)"
+		std::cout << '\n';
+
+		(k * a).VectorPrint();		// Should be "(12; -4)"
+		std::cout << '\n';
+
+		a.VectorPrint();			// Should be "(-3; 1)"
+		std::cout << '\n';
+	}
 
 #endif // OPERATOR_7
 

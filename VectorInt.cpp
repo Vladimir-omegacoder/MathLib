@@ -2,13 +2,6 @@
 
 
 
-mtl::VectorInt mtl::VectorInt::MultiplyByNum(const int num) const
-{
-
-	return VectorInt(m_x * num, m_y * num);
-
-}
-
 mtl::VectorInt mtl::VectorInt::DivideByNum(const int num) const
 {
 
@@ -166,7 +159,9 @@ bool mtl::operator==(const VectorInt& vec1, const VectorInt& vec2)
 
 bool mtl::operator!=(const VectorInt& vec1, const VectorInt& vec2)
 {
+
 	return !(vec1 == vec2);
+
 }
 
 
@@ -175,6 +170,22 @@ mtl::VectorInt mtl::operator+(const VectorInt& vec1, const VectorInt& vec2)
 {
 	
 	return VectorInt(vec1.GetX() + vec2.GetX(), vec1.GetY() + vec2.GetY());
+
+}
+
+
+
+mtl::VectorInt mtl::operator*(const VectorInt& vec, const double k)
+{
+
+	return VectorInt(vec.GetX() * k, vec.GetY() * k);
+
+}
+
+mtl::VectorInt mtl::operator*(const double k, const VectorInt& vec)
+{
+
+	return vec * k;
 
 }
 

@@ -34,8 +34,6 @@ namespace mtl {
 
 
 
-		VectorInt MultiplyByNum(const int num) const;
-
 		VectorInt DivideByNum(const int num) const;
 
 		int ScalarProduct(const VectorInt& vec) const;
@@ -121,6 +119,10 @@ namespace mtl {
 	VectorInt operator+(const VectorInt& vec1, const VectorInt& vec2);
 
 
+
+	VectorInt operator*(const VectorInt& vec, const double k);
+
+	VectorInt operator*(const double k, const VectorInt& vec);
 
 
 
