@@ -27,13 +27,6 @@ mtl::VectorInt mtl::VectorInt::Substract(const VectorInt& vec) const
 
 
 
-mtl::VectorInt mtl::VectorInt::operator+() const
-{
-
-	return VectorInt(*this);
-
-}
-
 mtl::VectorInt mtl::VectorInt::Invert() const
 {
 
@@ -56,6 +49,22 @@ void mtl::VectorInt::VectorPrint() const
 {
 
 	std::cout << '(' << m_x << "; " << m_y << ')';
+
+}
+
+
+
+mtl::VectorInt mtl::VectorInt::operator+() const
+{
+
+	return VectorInt(*this);
+
+}
+
+mtl::VectorInt mtl::VectorInt::operator-() const
+{
+
+	return VectorInt(-m_x, -m_y);
 
 }
 

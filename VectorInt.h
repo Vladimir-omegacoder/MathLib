@@ -44,7 +44,7 @@ namespace mtl {
 
 
 
-		VectorInt operator+() const;
+
 
 		VectorInt Invert() const;
 
@@ -55,6 +55,11 @@ namespace mtl {
 
 
 		void VectorPrint() const;
+
+
+
+		VectorInt operator+() const;
+		VectorInt operator-() const;
 
 
 

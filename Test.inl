@@ -85,7 +85,15 @@ int main()
 
 #ifdef OPERATOR_4
 
-//CODE HERE
+	//Operator "-a"
+	{
+		mtl::VectorInt a(23, -3);
+		(-a).VectorPrint();		// Should be "(-23; 3)"
+		std::cout << '\n';
+		a.VectorPrint();		// Should be "(23; -3)"
+		std::cout << '\n';
+	}
+
 
 #endif // OPERATOR_4
 
@@ -93,23 +101,23 @@ int main()
 
 #ifdef OPERATOR_5
 
-	//Operator "a + b"
-	{
-		mtl::VectorInt a(7, -10), b(1, 23) , c;
+		//Operator "a + b"
+		{
+			mtl::VectorInt a(7, -10), b(1, 23), c;
 
-		(a + b).VectorPrint();		// Should be "(8; 13)"
-		std::cout << '\n';
+			(a + b).VectorPrint();		// Should be "(8; 13)"
+			std::cout << '\n';
 
-		a.VectorPrint();			// Should be "(7; -10)"
-		std::cout << '\n';
+			a.VectorPrint();			// Should be "(7; -10)"
+			std::cout << '\n';
 
-		b.VectorPrint();			// Should be "(1, 23)"
-		std::cout << '\n';
+			b.VectorPrint();			// Should be "(1, 23)"
+			std::cout << '\n';
 
-		c = a + b;
-		c.VectorPrint();			// Should be "(8, 13)"
-		std::cout << '\n';
-	}
+			c = a + b;
+			c.VectorPrint();			// Should be "(8, 13)"
+			std::cout << '\n';
+		}
 
 #endif // OPERATOR_5
 
@@ -117,7 +125,7 @@ int main()
 
 #ifdef OPERATOR_6
 
-//CODE HERE
+		//CODE HERE
 
 #endif // OPERATOR_6
 
@@ -126,22 +134,22 @@ int main()
 #ifdef OPERATOR_7
 
 	//Operator "a * k(k * a)"
-	{
-		mtl::VectorInt a(-3, 1);
-		int k = -4;
+		{
+			mtl::VectorInt a(-3, 1);
+			int k = -4;
 
-		(a * k).VectorPrint();		// Should be "(12; -4)"
-		std::cout << '\n';
+			(a * k).VectorPrint();		// Should be "(12; -4)"
+			std::cout << '\n';
 
-		a.VectorPrint();			// Should be "(-3; 1)"
-		std::cout << '\n';
+			a.VectorPrint();			// Should be "(-3; 1)"
+			std::cout << '\n';
 
-		(k * a).VectorPrint();		// Should be "(12; -4)"
-		std::cout << '\n';
+			(k * a).VectorPrint();		// Should be "(12; -4)"
+			std::cout << '\n';
 
-		a.VectorPrint();			// Should be "(-3; 1)"
-		std::cout << '\n';
-	}
+			a.VectorPrint();			// Should be "(-3; 1)"
+			std::cout << '\n';
+		}
 
 #endif // OPERATOR_7
 
@@ -149,7 +157,7 @@ int main()
 
 #ifdef OPERATOR_8
 
-//CODE HERE
+		//CODE HERE
 
 #endif // OPERATOR_8
 
@@ -158,26 +166,26 @@ int main()
 #ifdef OPERATOR_9
 
 	//Prefix increment
-	{
-		mtl::VectorInt a(-5, 15);
-		(++a).VectorPrint();	// Should be "(-4; 16)"
+		{
+			mtl::VectorInt a(-5, 15);
+			(++a).VectorPrint();	// Should be "(-4; 16)"
+			std::cout << '\n';
+
+			a.VectorPrint();		// Should be "(-4; 16)"
+			std::cout << '\n';
+		}
+
 		std::cout << '\n';
 
-		a.VectorPrint();		// Should be "(-4; 16)"
-		std::cout << '\n';
-	}
+		//Postfix increment
+		{
+			mtl::VectorInt a(-5, 15);
+			(a++).VectorPrint();	// Should be "(-5; 15)
+			std::cout << '\n';
 
-	std::cout << '\n';
-
-	//Postfix increment
-	{
-		mtl::VectorInt a(-5, 15);
-		(a++).VectorPrint();	// Should be "(-5; 15)
-		std::cout << '\n';
-
-		a.VectorPrint();		// Should be "(-4; 16)"
-		std::cout << '\n';
-	}
+			a.VectorPrint();		// Should be "(-4; 16)"
+			std::cout << '\n';
+		}
 
 #endif // OPERATOR_9
 
@@ -185,25 +193,25 @@ int main()
 
 #ifdef OPERATOR_10
 
-	//Prefix decrement
-	{
-		mtl::VectorInt a(-5, 15);
-		(--a).VectorPrint();	// Should be "(-6; 14)"
-		std::cout << '\n';
-		a.VectorPrint();		// Should be "(-6; 14)"
-		std::cout << '\n';
-	}
+		//Prefix decrement
+		{
+			mtl::VectorInt a(-5, 15);
+			(--a).VectorPrint();	// Should be "(-6; 14)"
+			std::cout << '\n';
+			a.VectorPrint();		// Should be "(-6; 14)"
+			std::cout << '\n';
+		}
 
-	std::cout << '\n';
+		std::cout << '\n';
 
-	//Postfix decrement
-	{
-		mtl::VectorInt a(-5, 15);
-		(a--).VectorPrint();	// Should be "(-5; 15)
-		std::cout << '\n';
-		a.VectorPrint();		// Should be "(-6; 14)"
-		std::cout << '\n';
-	}
+		//Postfix decrement
+		{
+			mtl::VectorInt a(-5, 15);
+			(a--).VectorPrint();	// Should be "(-5; 15)
+			std::cout << '\n';
+			a.VectorPrint();		// Should be "(-6; 14)"
+			std::cout << '\n';
+		}
 
 #endif // OPERATOR_10
 
@@ -211,14 +219,14 @@ int main()
 
 #ifdef OPERATOR_11
 
-	//Operator "+="
-	{
-		mtl::VectorInt a(-5, 15), b(3, -7);
-		(a += b).VectorPrint();	// Should be "(-2; 8)
-		std::cout << '\n';
-		a.VectorPrint();		// Should be "(-2; 8)"
-		std::cout << '\n';
-	}
+		//Operator "+="
+		{
+			mtl::VectorInt a(-5, 15), b(3, -7);
+			(a += b).VectorPrint();	// Should be "(-2; 8)
+			std::cout << '\n';
+			a.VectorPrint();		// Should be "(-2; 8)"
+			std::cout << '\n';
+		}
 
 #endif // OPERATOR_11
 
@@ -226,14 +234,14 @@ int main()
 
 #ifdef OPERATOR_12
 
-	//Operator "-="
-	{
-		mtl::VectorInt a(-5, 15), b(3, -7);
-		(a -= b).VectorPrint();	// Should be "(-8; 22)"
-		std::cout << '\n';
-		a.VectorPrint();		// Should be "(-8; 22)"
-		std::cout << '\n';
-	}
+		//Operator "-="
+		{
+			mtl::VectorInt a(-5, 15), b(3, -7);
+			(a -= b).VectorPrint();	// Should be "(-8; 22)"
+			std::cout << '\n';
+			a.VectorPrint();		// Should be "(-8; 22)"
+			std::cout << '\n';
+		}
 
 #endif // OPERATOR_12
 
@@ -241,18 +249,18 @@ int main()
 
 #ifdef OPERATOR_13
 
-	//Operator "*="
-	{
-		mtl::VectorInt a(-8, 15);
-		const int k = -3;
+		//Operator "*="
+		{
+			mtl::VectorInt a(-8, 15);
+			const int k = -3;
 
-		(a *= k).VectorPrint();	// Should be "(24; -45)"
-		std::cout << '\n';
+			(a *= k).VectorPrint();	// Should be "(24; -45)"
+			std::cout << '\n';
 
-		a.VectorPrint();		// Should be "(24; -45)"
-		std::cout << '\n';
+			a.VectorPrint();		// Should be "(24; -45)"
+			std::cout << '\n';
 
-	}
+		}
 
 #endif // OPERATOR_13
 
@@ -260,16 +268,16 @@ int main()
 
 #ifdef OPERATOR_14
 
-	//Operator "/="
-	{
-		mtl::VectorInt a(-8, 15);
-		const int k = -3;
-		(a /= k).VectorPrint();	// Should be "(2; -5)"
-		std::cout << '\n';
-		a.VectorPrint();		// Should be "(2; -5)"
-		std::cout << '\n';
-		//a /= 0; //Exception, division by zero.
-	}
+		//Operator "/="
+		{
+			mtl::VectorInt a(-8, 15);
+			const int k = -3;
+			(a /= k).VectorPrint();	// Should be "(2; -5)"
+			std::cout << '\n';
+			a.VectorPrint();		// Should be "(2; -5)"
+			std::cout << '\n';
+			//a /= 0; //Exception, division by zero.
+		}
 
 #endif // OPERATOR_14
 
@@ -277,39 +285,39 @@ int main()
 
 #ifdef OPERATOR_15
 
-	//Operator "=="
-	{
-		mtl::VectorInt a(-5, 15), b(3, -7);
-		std::cout << "a: ";
-		a.VectorPrint();
-		std::cout << '\n';
-		std::cout << "b: ";
-		b.VectorPrint();
-		std::cout << '\n';
-		if (a == b)
+		//Operator "=="
 		{
-			std::cout << "a and b are equal\n";
+			mtl::VectorInt a(-5, 15), b(3, -7);
+			std::cout << "a: ";
+			a.VectorPrint();
+			std::cout << '\n';
+			std::cout << "b: ";
+			b.VectorPrint();
+			std::cout << '\n';
+			if (a == b)
+			{
+				std::cout << "a and b are equal\n";
+			}
+			else
+			{
+				std::cout << "a and b are not equal\n";
+			}
+			b.SetX(-5), b.SetY(15);
+			std::cout << "a: ";
+			a.VectorPrint();
+			std::cout << '\n';
+			std::cout << "b: ";
+			b.VectorPrint();
+			std::cout << '\n';
+			if (a == b)
+			{
+				std::cout << "a and b are equal\n";
+			}
+			else
+			{
+				std::cout << "a and b are not equal\n";
+			}
 		}
-		else
-		{
-			std::cout << "a and b are not equal\n";
-		}
-		b.SetX(-5), b.SetY(15);
-		std::cout << "a: ";
-		a.VectorPrint();
-		std::cout << '\n';
-		std::cout << "b: ";
-		b.VectorPrint();
-		std::cout << '\n';
-		if (a == b)
-		{
-			std::cout << "a and b are equal\n";
-		}
-		else
-		{
-			std::cout << "a and b are not equal\n";
-		}
-	}
 
 #endif // OPERATOR_15
 
@@ -317,44 +325,44 @@ int main()
 
 #ifdef OPERATOR_16
 
-	//Operator "!="
-	{
-		mtl::VectorInt a(-5, 15), b(3, -7);
-
-		std::cout << "a: ";
-		a.VectorPrint();
-		std::cout << '\n';
-		std::cout << "b: ";
-		b.VectorPrint();
-		std::cout << '\n';
-
-		if (a != b)
+		//Operator "!="
 		{
-			std::cout << "a and b are not equal\n";
-		}
-		else
-		{
-			std::cout << "a and b are equal\n";
-		}
+			mtl::VectorInt a(-5, 15), b(3, -7);
 
-		b.SetX(-5), b.SetY(15);
+			std::cout << "a: ";
+			a.VectorPrint();
+			std::cout << '\n';
+			std::cout << "b: ";
+			b.VectorPrint();
+			std::cout << '\n';
 
-		std::cout << "a: ";
-		a.VectorPrint();
-		std::cout << '\n';
-		std::cout << "b: ";
-		b.VectorPrint();
-		std::cout << '\n';
+			if (a != b)
+			{
+				std::cout << "a and b are not equal\n";
+			}
+			else
+			{
+				std::cout << "a and b are equal\n";
+			}
 
-		if (a != b)
-		{
-			std::cout << "a and b are not equal\n";
+			b.SetX(-5), b.SetY(15);
+
+			std::cout << "a: ";
+			a.VectorPrint();
+			std::cout << '\n';
+			std::cout << "b: ";
+			b.VectorPrint();
+			std::cout << '\n';
+
+			if (a != b)
+			{
+				std::cout << "a and b are not equal\n";
+			}
+			else
+			{
+				std::cout << "a and b are equal\n";
+			}
 		}
-		else
-		{
-			std::cout << "a and b are equal\n";
-		}
-	}
 
 #endif // OPERATOR_16
 
@@ -362,8 +370,8 @@ int main()
 
 #ifdef MODULUS_METHOD
 
-	mtl::VectorInt vec(5, 2);
-	std::cout << "Module: " << vec.Module() << std::endl;
+		mtl::VectorInt vec(5, 2);
+		std::cout << "Module: " << vec.Module() << std::endl;
 
 #endif // MODULUS_METHOD
 
@@ -371,20 +379,20 @@ int main()
 
 #ifdef SCALAR_PRODUCT
 
-	//Scalar product
-	{
-		mtl::VectorInt a1(-5, 15), b1(3, -7);
-		std::cout << mtl::VectorInt::ScalarProduct(a1, b1) << '\n';	//Should be "-120"
+		//Scalar product
+		{
+			mtl::VectorInt a1(-5, 15), b1(3, -7);
+			std::cout << mtl::VectorInt::ScalarProduct(a1, b1) << '\n';	//Should be "-120"
 
-		mtl::VectorInt a2(3, 1), b2(1, -3);
-		std::cout << mtl::VectorInt::ScalarProduct(a2, b2) << '\n';	//Should be "0"
-	}
+			mtl::VectorInt a2(3, 1), b2(1, -3);
+			std::cout << mtl::VectorInt::ScalarProduct(a2, b2) << '\n';	//Should be "0"
+		}
 
 #endif // SCALAR_PRODUCT
 
 
 
 
-	return 0;
+		return 0;
 
 }
