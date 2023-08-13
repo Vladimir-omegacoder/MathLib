@@ -54,7 +54,13 @@ int main()
 
 #ifdef OPERATOR_1
 
-	//CODE HERE
+	//Operator "<<"
+	{
+
+		mtl::VectorInt a(7, -10);
+		std::cout << a << '\n';		// Should be "(-7; 10)"
+
+    }
 
 #endif // OPERATOR_1
 
@@ -62,7 +68,14 @@ int main()
 
 #ifdef OPERATOR_2
 
-//CODE HERE
+	//Operator ">>"
+	{
+
+		mtl::VectorInt a;
+		std::cin >> a;
+		std::cout << a << '\n';
+
+    }
 
 #endif // OPERATOR_2
 

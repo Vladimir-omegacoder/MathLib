@@ -175,6 +175,26 @@ bool mtl::operator!=(const VectorInt& vec1, const VectorInt& vec2)
 
 
 
+std::ostream& mtl::operator<<(std::ostream& out, const VectorInt& vec)
+{
+
+	out << '(' << vec.m_x << "; " << vec.m_y << ')';
+	return out;
+
+}
+
+std::istream& mtl::operator>>(std::istream& in, VectorInt& vec)
+{
+
+	in >> vec.m_x;
+	in >> vec.m_y;
+
+	return in;
+
+}
+
+
+
 mtl::VectorInt mtl::operator+(const VectorInt& vec1, const VectorInt& vec2)
 {
 	

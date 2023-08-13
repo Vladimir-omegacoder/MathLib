@@ -89,6 +89,13 @@ namespace mtl {
 
 		friend bool operator!=(const VectorInt& vec1, const VectorInt& vec2);
 
+
+
+		friend std::ostream& operator<<(std::ostream& out, const VectorInt& vec);
+
+		friend std::istream& operator>>(std::istream& in, VectorInt& vec);
+
+
 		//TODO:
 		//1. Operators to overload
 		// -----------------
