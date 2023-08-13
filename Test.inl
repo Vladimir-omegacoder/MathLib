@@ -175,7 +175,18 @@ int main()
 
 #ifdef OPERATOR_8
 
-		//CODE HERE
+		//Operator "a / k"
+		{
+			mtl::VectorInt a(-12, 4);
+			int k = 4;
+
+			(a / k).VectorPrint();		// Should be "(-3; 1)"
+			std::cout << '\n';
+
+			a.VectorPrint();			// Should be "(-12; 4)"
+			std::cout << '\n';
+
+		}
 
 #endif // OPERATOR_8
 

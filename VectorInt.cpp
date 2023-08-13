@@ -206,4 +206,12 @@ mtl::VectorInt mtl::operator*(const double k, const VectorInt& vec)
 }
 
 
+mtl::VectorInt mtl::operator/(const VectorInt& vec, const double k)
+{
+
+	return VectorInt(vec.GetX()/k, vec.GetY()/k);
+
+}
+
+
 
