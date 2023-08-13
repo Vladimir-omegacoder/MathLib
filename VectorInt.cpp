@@ -182,6 +182,13 @@ mtl::VectorInt mtl::operator+(const VectorInt& vec1, const VectorInt& vec2)
 
 }
 
+mtl::VectorInt mtl::operator-(const VectorInt& vec1, const VectorInt& vec2)
+{
+
+	return VectorInt(vec1.GetX()-vec2.GetX(), vec1.GetY()-vec2.GetY());
+
+}
+
 
 
 mtl::VectorInt mtl::operator*(const VectorInt& vec, const double k)

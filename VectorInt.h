@@ -122,6 +122,7 @@ namespace mtl {
 
 
 	VectorInt operator+(const VectorInt& vec1, const VectorInt& vec2);
+	VectorInt operator-(const VectorInt& vec1, const VectorInt& vec2);
 
 
 
