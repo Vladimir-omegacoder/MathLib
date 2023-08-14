@@ -318,6 +318,9 @@ int main()
 			std::cout << '\n';
 			a.VectorPrint();		// Should be "(2; -5)"
 			std::cout << '\n';
+
+			const int b = 0;
+			std::cout << a / b << '\n';		//Should be Exception
 			//a /= 0; //Exception, division by zero.
 		}
 
