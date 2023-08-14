@@ -2,13 +2,6 @@
 
 
 
-mtl::VectorInt mtl::VectorInt::DivideByNum(const int num) const
-{
-
-	return VectorInt(m_x / num, m_y / num);
-
-}
-
 int mtl::VectorInt::ScalarProduct(const VectorInt& vec1, const VectorInt& vec2)
 {
 
@@ -18,37 +11,10 @@ int mtl::VectorInt::ScalarProduct(const VectorInt& vec1, const VectorInt& vec2)
 
 
 
-mtl::VectorInt mtl::VectorInt::Substract(const VectorInt& vec) const
-{
-
-	return VectorInt(m_x - vec.m_x, m_y - vec.m_y);
-
-}
-
-
-
-mtl::VectorInt mtl::VectorInt::Invert() const
-{
-
-	return VectorInt(-m_x, -m_y);
-
-}
-
-
-
 double mtl::VectorInt::Module() const
 {
 
 	return sqrt(m_x * m_x + m_y * m_y);
-
-}
-
-
-
-void mtl::VectorInt::VectorPrint() const
-{
-
-	std::cout << '(' << m_x << "; " << m_y << ')';
 
 }
 

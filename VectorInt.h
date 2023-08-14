@@ -2,7 +2,8 @@
 #include <iostream>
 #include <cmath>
 
-namespace mtl {
+namespace mtl 
+{
 
 
 
@@ -34,31 +35,14 @@ namespace mtl {
 
 
 
-		VectorInt DivideByNum(const int num) const;
-
 		static int ScalarProduct(const VectorInt& vec1, const VectorInt& vec2);
-
-
-
-		VectorInt Substract(const VectorInt& vec) const;
-
-
-
-
-
-		VectorInt Invert() const;
-
-
 
 		double Module() const;
 
 
 
-		void VectorPrint() const;
-
-
-
 		VectorInt operator+() const;
+
 		VectorInt operator-() const;
 
 
@@ -68,9 +52,9 @@ namespace mtl {
 		VectorInt operator--(int);
 
 
-		VectorInt& operator ++();
+		VectorInt& operator++();
 
-		VectorInt operator ++(int);
+		VectorInt operator++(int);
 
 
 
@@ -140,6 +124,8 @@ namespace mtl {
 
 
 	VectorInt operator/(const VectorInt& vec, const double k);
+
+
 
 
 
