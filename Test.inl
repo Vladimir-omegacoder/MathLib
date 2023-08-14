@@ -138,7 +138,6 @@ int main()
 
 #ifdef OPERATOR_6
 
-
 		//Operator "a - b"
 		{
 			mtl::VectorInt a(10, -12), b(1, 1), c;
@@ -156,7 +155,6 @@ int main()
 			c.VectorPrint();			// Should be "(9, -13)"
 			std::cout << '\n';
 		}
-
 
 #endif // OPERATOR_6
 
