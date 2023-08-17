@@ -10,5 +10,5 @@
 
 //MAIN
 
-#include "Test.inl"
+#include "Test_MatrixInt.inl"
 
