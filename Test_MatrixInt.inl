@@ -3,50 +3,38 @@
 
 
 
+//---------Tests names---------
+// OPERATOR_1		<<
 
-void PrintMtrix(const mtl::MatrixInt2 &matrix)
-{
 
-	for (int i = 0; i < 2; ++i)
-	{
 
-		for (int j = 0; j < 2; ++j)
-		{
+//#define OPERATOR_1
 
-			std::cout << matrix(i, j) << '\t';
 
-		}
 
-		std::cout << '\n';
-
-	}
-
-}
 
 
 
 int main() 
 {
 
-	int arr[4] {1, 2, 3, 4};
+#ifdef OPERATOR_1
+
+	//Operator "<<"
+	{
+
+		int arr[4]{ 1, 2, 3, 4 };
+
+		mtl::MatrixInt2 matrix = arr;		// Should be "1		2"
+		                                    //			 "3		4"
+		std::cout << matrix;			    
+
+	}
+
+#endif // OPERATOR_1
 
 
-	mtl::MatrixInt2 matrix = arr;
-	mtl::MatrixInt2 copy(arr);
-	copy = arr;
 
-
-	copy(0, 0) = 9;
-	copy(1, 1) = 8;
-
-	PrintMtrix(copy);
-	std::cout << '\n';
-	std::cout << '\n';
-
-
-	PrintMtrix(matrix);
-	std::cout << '\n';
-	std::cout << '\n';
 
 	return 0;
 

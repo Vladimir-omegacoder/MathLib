@@ -1,5 +1,6 @@
 #pragma once
 #include <initializer_list>
+#include <iostream>
 
 
 
@@ -34,6 +35,8 @@ namespace mtl
 		int& operator() (int row, int col);
 
 
+
+		friend std::ostream& operator<<(std::ostream& out, const MatrixInt2& matrix);
 
 	};
 

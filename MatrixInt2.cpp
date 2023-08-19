@@ -37,3 +37,26 @@ int& mtl::MatrixInt2::operator()(int row, int col)
 
 
 
+std::ostream& mtl::operator<<(std::ostream& out, const MatrixInt2& matrix)
+{
+
+	for (int i = 0; i < 2; ++i)
+	{
+
+		for (int j = 0; j < 2; ++j)
+		{
+
+			out << matrix(i, j) << '\t';
+
+		}
+
+		out << '\n';
+
+	}
+
+	return out;
+
+}
+
+
+
