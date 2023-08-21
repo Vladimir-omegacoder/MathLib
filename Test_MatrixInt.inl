@@ -6,11 +6,13 @@
 //---------Tests names---------
 // OPERATOR_1		<<
 // Transposition
+// determinant
 
 
 
 //#define OPERATOR_1
 //#define Transposition
+//#define Determinan
 
 
 
@@ -55,8 +57,26 @@ int main()
 
 	}
 
-#endif // OPERATOR_1
+#endif // Transposition
 
+#ifdef Determinan
+
+	//determinan
+	{
+
+		int arr[4]{ 1, 2, 3, 4 };
+
+		mtl::MatrixInt2 matrix = arr;			
+
+		std::cout << matrix.Determinant() << '\n';   // Should be -2
+
+		int det = matrix.Determinant();          
+
+		std::cout << det << '\n';					// Should be -2
+
+	}
+
+#endif // Determinan
 
 	return 0;
 

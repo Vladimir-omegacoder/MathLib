@@ -35,6 +35,17 @@ mtl::MatrixInt2 mtl::MatrixInt2::Transpose()
 
 
 
+int mtl::MatrixInt2::Determinant()
+{
+
+	int det = m_matrix[0] * m_matrix[3] - m_matrix[1] * m_matrix[2];
+	return det;
+
+}
+
+
+
+
 
 int mtl::MatrixInt2::operator()(int row, int col) const
 {

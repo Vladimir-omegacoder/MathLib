@@ -33,6 +33,9 @@ namespace mtl
 		MatrixInt2 Transpose();
 
 
+		int Determinant();
+
+
 
 		int operator() (int row, int col) const;
 
