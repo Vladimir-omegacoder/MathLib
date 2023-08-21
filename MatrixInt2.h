@@ -30,6 +30,10 @@ namespace mtl
 
 
 
+		MatrixInt2 Transpose();
+
+
+
 		int operator() (int row, int col) const;
 
 		int& operator() (int row, int col);

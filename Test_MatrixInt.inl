@@ -5,10 +5,12 @@
 
 //---------Tests names---------
 // OPERATOR_1		<<
+// Transposition
 
 
 
 //#define OPERATOR_1
+//#define Transposition
 
 
 
@@ -33,7 +35,27 @@ int main()
 
 #endif // OPERATOR_1
 
+#ifdef Transposition
 
+	//Transposition
+	{
+
+		int arr[4]{ 1, 2, 3, 4 };
+
+		mtl::MatrixInt2 matrix = arr;		// Should be "1		2"
+		                                    //			 "3		4"
+		std::cout << matrix << '\n';
+
+		std::cout << matrix.Transpose() << '\n';		// Should be "1		3"
+		                                                //			 "2		4"
+
+
+		std::cout << matrix << '\n';                    // Should be "1		3"
+		                                                //			 "2		4"
+
+	}
+
+#endif // OPERATOR_1
 
 
 	return 0;

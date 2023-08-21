@@ -21,6 +21,21 @@ mtl::MatrixInt2::MatrixInt2(int matrix[4])
 
 
 
+mtl::MatrixInt2 mtl::MatrixInt2::Transpose()
+{
+
+	int temp = m_matrix[1];
+	m_matrix[1] = m_matrix[2];
+	m_matrix[2] = temp;
+
+	return MatrixInt2(m_matrix);
+
+}
+
+
+
+
+
 int mtl::MatrixInt2::operator()(int row, int col) const
 {
 
