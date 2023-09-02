@@ -103,6 +103,11 @@ mtl::MatrixInt2 mtl::MatrixInt2::Transpose()
 
 }
 
+int mtl::MatrixInt2::Minor(const int row, const int col) const
+{
+	return (*this)(1 - row, 1 - col);
+}
+
 
 
 int mtl::MatrixInt2::operator()(int row, int col) const

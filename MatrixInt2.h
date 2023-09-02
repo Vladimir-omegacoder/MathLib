@@ -44,6 +44,8 @@ namespace mtl
 
 		MatrixInt2 Transpose();
 
+		int Minor(const int row, const int col) const;
+
 
 
 		int operator() (int row, int col) const;

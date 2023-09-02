@@ -7,12 +7,14 @@
 // OPERATOR_1		<<
 // Transposition
 // CONSTRUCTORS
+// MINOR
 
 
 
 //#define OPERATOR_1
 //#define Transposition
 //#define CONSTRUCTORS
+//#define MINOR
 
 
 
@@ -128,7 +130,23 @@ int main()
 
 #endif // CONSTRUCTORS
 
-	
+#ifdef MINOR
+
+	//MINOR
+	{
+
+		mtl::MatrixInt2 a{ 0, 1, 2, 3 };
+
+		std::cout << a.Minor(0, 0) << '\n';		// Should be 3
+		std::cout << a.Minor(0, 1) << '\n';		// Should be 2
+		std::cout << a.Minor(1, 0) << '\n';		// Should be 1
+		std::cout << a.Minor(1, 1) << '\n';		// Should be 0
+
+	}
+
+#endif // MINOR
+
+
 
 	return 0;
 
