@@ -11,6 +11,7 @@
 // CONSTRUCTORS
 // MINOR
 // MULTIPLY_MATRIX
+// IS_NULL_MATRIX
 
 
 
@@ -19,6 +20,7 @@
 //#define CONSTRUCTORS
 //#define MINOR
 //#define MULTIPLY_MATRIX
+//#define IS_NULL_MATRIX
 
 
 
@@ -181,6 +183,30 @@ int main()
 	}
 
 #endif // MULTIPLY_MATRIX
+
+#ifdef IS_NULL_MATRIX
+
+	//IS_NULL_MATRIX
+	{
+
+		mtl::MatrixInt2 a
+		{
+			{ 0, 0 },
+			{ 0, 0 }
+		};
+
+		mtl::MatrixInt2 b
+		{
+			{ -1, 0 },
+			{ 0, 0 }
+		};
+
+		std::cout << std::boolalpha << a.IsNullMatrix() << '\n'; //Should be: true
+		std::cout << std::boolalpha << b.IsNullMatrix() << '\n'; //Should be: false
+
+	}
+
+#endif // IS_NULL_MATRIX
 
 
 

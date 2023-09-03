@@ -108,6 +108,13 @@ int mtl::MatrixInt2::Minor(const int row, const int col) const
 	return (*this)(1 - row, 1 - col);
 }
 
+bool mtl::MatrixInt2::IsNullMatrix() const
+{
+
+	return !(*this)(0, 0) && !(*this)(0, 1) && !(*this)(1, 0) && !(*this)(1, 1);
+
+}
+
 
 
 int mtl::MatrixInt2::operator()(int row, int col) const

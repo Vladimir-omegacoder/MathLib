@@ -46,6 +46,8 @@ namespace mtl
 
 		int Minor(const int row, const int col) const;
 
+		bool IsNullMatrix() const;
+
 
 
 		int operator() (int row, int col) const;
