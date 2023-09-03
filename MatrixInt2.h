@@ -60,6 +60,10 @@ namespace mtl
 
 
 
+	MatrixInt2 MultiplyMatrices(const MatrixInt2& m1, const MatrixInt2& m2);
+
+
+
 
 
 }

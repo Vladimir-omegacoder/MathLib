@@ -3,11 +3,14 @@
 
 
 
+
+
 //---------Tests names---------
 // OPERATOR_1		<<
 // Transposition
 // CONSTRUCTORS
 // MINOR
+// MULTIPLY_MATRIX
 
 
 
@@ -15,6 +18,9 @@
 //#define Transposition
 //#define CONSTRUCTORS
 //#define MINOR
+//#define MULTIPLY_MATRIX
+
+
 
 
 
@@ -145,6 +151,36 @@ int main()
 	}
 
 #endif // MINOR
+
+#ifdef MULTIPLY_MATRIX
+
+	//MULTIPLY_MATRIX
+	{
+
+		mtl::MatrixInt2 a
+		{
+			{ 4, -1 }, 
+			{ 0, 3 }	
+		};
+		mtl::MatrixInt2 b
+		{	
+			{ 1, 5 },
+			{ 7, 2 }	 
+		};
+
+		mtl::MatrixInt2 c = mtl::MultiplyMatrices(a, b);
+
+		std::cout << c << '\n';
+
+		//Should be:
+		//	
+		// -3	18
+		// 21	6
+		// 
+
+	}
+
+#endif // MULTIPLY_MATRIX
 
 
 
